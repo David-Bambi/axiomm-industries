@@ -1,6 +1,6 @@
 ---
 title: Pitch et intentions
-summary: "Ce que l'on sait déjà d'Axiomm Industries et les __questions à trancher__ pour définir le jeu."
+summary: "Le problème à résoudre (Idle Planet Miner manque de __choix__ et d'__espace à organiser__), l'expérience visée (__optimiser__ un réseau de routes), les buts et les quatre piliers."
 icon: lucide:sparkles
 links: []
 related:
@@ -10,38 +10,86 @@ related:
   - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/problem-statement.cpt
   - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/eight-filters.cpt
 ---
-Fiche de départ (2026-10-11). Elle ne contient que ce que David a dit ;
-le reste est à décider en 0.2.0.
+Décisions prises en 0.2.0 (tâche Nexus `t-4ll`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+## Pitch
+Lentille __Eight Filters__ (filtre « original ») :
+
+> Un Idle Planet Miner où la galaxie est un __réseau logistique à
+> concevoir__ : chaque nouvelle planète oblige à repenser ses routes.
 
 ## Ce qui est décidé
 - __Sujet__ : gérer __Axiomm__, une industrie à l'échelle d'une galaxie.
-- __Vue__ : celle d'__Idle Planet__ (voir [Jeux de référence](references.cpt)).
-- __Problème à résoudre__ : Idle Planet est __trop simple__. Axiomm doit
-  offrir plus de décisions, dans l'esprit de __Satisfactory__.
+- __Vue__ : celle d'__Idle Planet Miner__ (voir [Jeux de référence](references.cpt)).
 - __Plateforme__ : Android, avec Godot 4.5.
-- __But__ : publier le jeu.
 - David __fait le jeu lui-même__.
 
-## Questions à trancher
-Lentille __Essential Experience__ :
-- Quelle émotion domine ? La satisfaction d'une usine qui tourne seule,
-  le plaisir d'optimiser, la sensation de croissance ?
-- Quel est le __moment idéal__ d'une partie ?
+## Le problème à résoudre
+Lentille __Problem Statement__. Idle Planet Miner est trop simple parce
+que :
+- __Il n'y a pas d'espace à organiser__ : rien à placer, rien à agencer,
+  aucune logistique entre les planètes.
+- __Les choix sont évidents__ : il y a toujours une meilleure
+  amélioration à acheter.
+- __Il manque de choix à faire__ tout court.
 
-Lentille __Problem Statement__ :
-- Qu'est-ce qui rend Idle Planet « trop simple », précisément ? Trop
-  peu de choix, des choix évidents, trop d'attente ?
-- Le jeu reste-t-il un __idle__ (il progresse sans le joueur) ou
-  devient-il un jeu de gestion actif ?
-- Buts par priorité : se faire plaisir, apprendre, publier, gagner de
-  l'argent ?
+Axiomm réussit s'il donne au joueur __de vrais choix__, dans __un
+espace qu'il organise__.
 
-Lentille __Eight Filters__ :
-- Ce qui distingue Axiomm d'Idle Planet et de Satisfactory, en une
-  phrase.
-- Temps disponible par semaine et taille d'une première version
-  publiable.
+__Pas de choix évident__ : ce n'est pas un pilier mais une __règle de
+l'économie__. Chaque route et chaque spécialisation a un coût ou un
+compromis (à définir dans la tâche « Économie et chaînes de
+production »). Le jeu ne doit pas devenir trop complexe pour autant :
+le but est qu'on puisse faire des choix, pas d'empiler les systèmes.
 
-## Piliers
-À écrire en 0.2.0, classés par priorité : en cas de conflit, le plus
-haut l'emporte.
+## Expérience essentielle
+Lentille __Essential Experience__.
+
+- __Émotion dominante : optimiser.__ Le plaisir de l'ingénieur : trouver
+  le bon ratio, régler un goulet, rendre la chaîne parfaite.
+- __Forme : hybride.__ L'industrie produit hors ligne, mais le cœur du
+  jeu est de __concevoir et d'optimiser pendant qu'on joue__. Revenir
+  après une absence sert à constater les résultats et à repérer le
+  prochain goulet.
+- __L'espace à organiser : les routes de la galaxie.__ On n'agence pas
+  l'intérieur des planètes ; on décide quelles planètes se spécialisent,
+  quelles routes les relient et quels cargos les desservent.
+- __Moment idéal : la nouvelle planète.__ Le joueur débloque une planète
+  aux ressources rares et doit __repenser toute sa chaîne__ autour
+  d'elle : nouvelles routes, nouvelles spécialités, anciens goulets
+  déplacés.
+
+## Pourquoi ce jeu
+Lentille __Problem Statement__. Buts, par priorité :
+
+1. __Se faire plaisir__ : faire le jeu auquel David a envie de jouer.
+2. __Apprendre__ : Godot, game design, Android.
+3. __Publier__ sur Google Play.
+
+Gagner de l'argent n'est pas un but : la monétisation reste à voir
+(voir [Publication](publication.cpt)), mais elle ne prime jamais sur les
+trois buts ci-dessus.
+
+## Faisabilité
+Lentille __Eight Filters__ (filtre « réalisable »).
+
+- __Temps__ : 10 à 20 heures par semaine.
+- __Priorité__ : Axiomm passe __avant__ Sorry, I'm Late !
+
+## Piliers, par priorité
+En cas de conflit, le pilier le plus haut l'emporte.
+
+1. __Chaque planète change la donne__ : une nouvelle planète n'ajoute
+   pas seulement des chiffres, elle remet le réseau en question.
+2. __Le réseau avant tout__ : les routes et les cargos sont le cœur du
+   jeu. Le reste (améliorations, recherche) sert le réseau.
+3. __Respecter le temps du joueur__ : le jeu avance hors ligne de façon
+   honnête, sans attente forcée ni minuterie artificielle. On peut aussi
+   bien jouer 5 minutes qu'une heure.
+4. __Simple à prendre en main, profond à maîtriser__ : on démarre comme
+   dans Idle Planet Miner, puis la profondeur se révèle peu à peu.
+
+## Questions ouvertes
+- Taille d'une première version publiable : à fixer dans la synthèse de
+  0.2.0 (tâche `t-g0d`).

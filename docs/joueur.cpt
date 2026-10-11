@@ -1,0 +1,62 @@
+---
+title: Joueur et contexte
+summary: "Le joueur visé (idle d'abord, joueur d'usines ensuite), les plaisirs par priorité, des sessions __courtes et longues__, en __portrait__ et hors connexion."
+icon: lucide:smartphone
+links: []
+related:
+  - pitch.cpt
+  - technique.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/player.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/pleasure.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/venue.cpt
+---
+Décisions prises en 0.2.0 (tâche Nexus `t-x70`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+## Joueur visé
+Lentille __Player__. Le premier joueur visé est David lui-même, puis :
+
+1. __Le joueur d'idle__ (Idle Planet Miner, Egg Inc.) : il est attiré
+   par la présentation et la progression facile. C'est lui qu'on attire
+   en premier.
+2. __Le joueur d'usines__ (Factorio, Satisfactory, Mindustry) : il
+   reste pour la profondeur du réseau.
+
+Conséquence : le début ressemble à un idle, la profondeur se révèle peu
+à peu (pilier 4, voir [Pitch et intentions](pitch.cpt)).
+
+## Plaisirs
+Lentille __Pleasure__ (les huit types de plaisir de LeBlanc), par
+priorité :
+
+1. __Expression__ : chaque joueur construit __son__ réseau ; deux
+   galaxies ne se ressemblent pas.
+2. __Découverte__ : explorer la galaxie, trouver de nouvelles planètes,
+   ressources et recettes.
+3. __Passe-temps__ (*submission*) : un rituel apaisant ; on ouvre le
+   jeu, on règle deux routes, on le referme.
+4. __Défi, léger__ : quelques objectifs ou contrats à remplir, sans
+   jamais de punition sévère.
+
+L'émotion dominante reste __optimiser__, mais __sans pression__ :
+optimiser est une façon de s'exprimer, pas une épreuve.
+
+## Contexte de jeu
+Lentille __Venue__.
+
+| Élément | Décision |
+|---|---|
+| Plateforme | Téléphone Android |
+| Orientation | __Portrait__, jouable d'une main |
+| Sessions | __Courtes__ (quelques minutes pour récolter et ajuster) __et longues__ (30 min et plus pour repenser le réseau) |
+| Connexion | Aucune : tout se joue __hors connexion__ |
+| Langues | __Français et anglais__ dès le début |
+
+Conséquences :
+- Les deux types de session doivent être agréables : une visite courte
+  ne doit pas obliger à ouvrir dix menus.
+- Le portrait laisse peu de largeur pour un réseau : la lisibilité de la
+  carte de la galaxie est un risque (tâche « Style visuel et interface
+  tactile »).
+- Les textes passent par les traductions de Godot dès la première ligne
+  de code.

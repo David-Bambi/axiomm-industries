@@ -22,13 +22,15 @@ confirmé par David le 2026-10-11.
 | Limite pour Axiomm | Trop simple | Construction 3D, sessions longues : mal adaptées au téléphone |
 
 ## Pistes pour aller plus loin qu'Idle Planet
-Options à discuter en 0.2.0, pas des décisions. Lentilles
+__Retenu__ (voir [Pitch et intentions](pitch.cpt)) : la __logistique
+entre planètes__ est le cœur du jeu. Les autres pistes restent à
+discuter dans la tâche « Économie et chaînes de production ». Lentilles
 __Meaningful Choices__ et __Simplicity/Complexity__ : chaque piste doit
 ajouter des choix intéressants, pas seulement des chiffres.
 
 - __Ratios et goulets__ : une recette consomme et produit à un débit ;
   le joueur équilibre ses machines (Satisfactory).
-- __Logistique entre planètes__ : des routes de cargos avec capacité et
+- __Logistique entre planètes__ (__retenu__) : des routes de cargos avec capacité et
   durée de trajet ; acheminer devient un problème.
 - __Énergie__ : une ressource partagée qui limite la croissance.
 - __Place limitée par planète__ : chaque planète a des emplacements et

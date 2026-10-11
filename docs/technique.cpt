@@ -17,7 +17,9 @@ Points connus à l'avance ; les choix seront faits en 0.2.0.
 | Moteur | Godot 4.5, GDScript |
 | Plateforme | Android |
 | Rendu | À choisir : __Compatibility__ (OpenGL ES 3, le plus d'appareils, suffisant en 2D) ou __Mobile__ (Vulkan) |
-| Orientation | À choisir : portrait (une main, comme Idle Planet) ou paysage |
+| Orientation | __Portrait__ (voir [Joueur et contexte](joueur.cpt)) |
+| Connexion | Aucune : hors connexion |
+| Langues | Français et anglais : traductions de Godot dès le début |
 | Contrôles | Tactile : toucher, glisser, pincer pour zoomer |
 
 ## Préparer l'export Android

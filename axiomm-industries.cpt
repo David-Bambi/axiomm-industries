@@ -3,6 +3,7 @@ title: Axiomm Industries
 summary: "Jeu de gestion d'une __industrie galactique__ sur Android : la vue d'Idle Planet, la profondeur de production de Satisfactory."
 icon: lucide:factory
 links: [docs/pitch.cpt,
+        docs/joueur.cpt,
         docs/references.cpt,
         docs/technique.cpt,
         docs/publication.cpt,
@@ -18,8 +19,10 @@ d'__Idle Planet__ ; la profondeur des chaînes de production vient de
 __Satisfactory__, parce qu'Idle Planet est jugé __trop simple__.
 
 ## Où regarder
-- **Pitch et intentions** : ce que l'on sait du jeu et les questions à
-  trancher.
+- **Pitch et intentions** : le problème à résoudre, l'expérience
+  visée, les buts et les piliers.
+- **Joueur et contexte** : joueur visé, plaisirs, sessions, portrait,
+  langues.
 - **Jeux de référence** : ce qu'on prend à Idle Planet et à
   Satisfactory, et les pistes pour aller plus loin.
 - **Contraintes techniques** : Godot 4.5, Android, progression hors
@@ -32,8 +35,9 @@ __Satisfactory__, parce qu'Idle Planet est jugé __trop simple__.
 | Élément | Valeur |
 |---|---|
 | Moteur | Godot **4.5** (GDScript) |
-| Plateforme | **Android** (téléphone) |
-| Genre | Gestion et production, inspiré des jeux *idle* |
+| Plateforme | **Android** (téléphone, portrait, hors connexion) |
+| Genre | Gestion et logistique galactique, hybride idle |
+| Langues | Français et anglais |
 | But | Publier le jeu à terme |
 | Dossier | `~/projets/7_jeux/axiomm_industries` |
 | Notes pour Claude | [CLAUDE.md](CLAUDE.md) |
