@@ -73,7 +73,8 @@ galaxie).
 __Ce que l'on garde__ :
 - Un __bonus de prestige__, sous forme de __compétences passives__ qui
   aident à reconstruire plus vite. Le joueur __choisit ses passifs au
-  début de chaque galaxie__ : chaque départ est déjà un choix.
+  début de chaque galaxie__ : chaque départ est déjà un choix (détails
+  dans [Économie et chaînes de production](economie.cpt)).
 - Tout le reste repart de zéro : réseau, recherche, jalons.
 
 ## Fin
@@ -91,5 +92,3 @@ montrent le progrès sans menu.
 
 ## Questions ouvertes
 - Quelles aptitudes débloque la mégastructure (plus tard).
-- Quels passifs proposer, et combien en choisir par galaxie (tâche
-  « Économie et chaînes de production »).

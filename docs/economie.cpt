@@ -1,0 +1,114 @@
+---
+title: Économie et chaînes de production
+summary: "Des planètes __spécialisées__, des chaînes de 4 à 5 niveaux, des routes dont le débit dépend des __cargos__, une énergie globale et des revenus par __contrats__ seulement (délai, échec doux)."
+icon: lucide:coins
+links: []
+related:
+  - pitch.cpt
+  - boucle-de-jeu.cpt
+  - references.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/economy.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/meaningful-choices.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/balance.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/triangularity.cpt
+---
+Décisions prises en 0.2.0 (tâche Nexus `t-h9e`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+__Règle de base__ (voir [Pitch et intentions](pitch.cpt)) : pas de
+choix évident, mais pas de complexité gratuite. Chaque système ci-dessous
+existe parce qu'il crée un choix.
+
+## Planètes
+Lentille __Meaningful Choices__.
+
+- On n'agence pas l'intérieur d'une planète : on lui donne __une
+  spécialité__ (mine, fonderie, usine…), puis on améliore son niveau.
+  Choisir la spécialité est la décision centrale.
+- Chaque planète a des __traits__ : bonus et malus (riche mais lointaine,
+  proche mais pauvre, chaude donc fonderie efficace…). La meilleure
+  spécialité dépend donc de la planète et de sa place dans le réseau.
+
+Liste des spécialités : à écrire (mine, fonderie, usine, centrale,
+entrepôt… ?).
+
+## Chaînes de production
+- __4 à 5 niveaux__ de transformation, par exemple : minerai → lingot →
+  pièce → composant → produit avancé.
+- Les produits avancés __mélangent plusieurs chaînes__ : il faut faire
+  converger des flux venus de planètes différentes.
+- __Recettes alternatives__ : un même produit peut se faire de deux
+  façons, avec des ressources différentes. Une galaxie pauvre en une
+  ressource reste jouable.
+
+## Routes
+Lentille __Triangularity__ : une route sûre et modeste, ou une route
+risquée et rentable.
+
+- Le __débit d'une route dépend des cargos__ qui lui sont affectés. Plus
+  la route est longue, plus il faut de cargos pour le même débit.
+- Compromis qui rendent le choix d'une route intéressant :
+
+| Compromis | Le choix |
+|---|---|
+| __Distance__ | Planète riche mais lointaine (beaucoup de cargos) ou pauvre mais proche |
+| __Obstacles__ | Traverser une nébuleuse (plus court, plus cher) ou la contourner (plus long) |
+| __Hubs, entrepôts__ | Regrouper les flux (moins de routes) au risque d'un point qui sature |
+| __Types de cargos__ | Rapides et petits, ou lents et gros ; certains produits demandent un cargo spécial |
+
+Les quatre compromis ensemble sont beaucoup pour un débutant : ils
+arrivent __par les jalons__ (pilier 4). Ordre d'arrivée à décider.
+
+## Énergie
+- Une __réserve globale__ : les planètes spécialisées en __centrale__
+  produisent de l'énergie pour toute la galaxie, sans transport.
+- Toutes les usines y puisent : chaque planète consacrée à l'énergie est
+  une planète qui ne produit pas autre chose.
+
+## Argent
+Lentille __Economy__.
+
+| Monnaie | Gagnée par | Dépensée pour |
+|---|---|---|
+| __Crédits__ | Les __contrats__ uniquement | Tout ce qui s'achète dans la galaxie : spécialités, niveaux, cargos, sondes, recherche |
+| __Prestige__ | Au départ d'une galaxie, selon les __crédits gagnés__ dans celle-ci | Débloquer des passifs |
+
+- __Pas de marché__ : on ne vend pas sa production au hasard. Chaque
+  livraison répond à un contrat, donc à un but.
+- Conséquence : il doit __toujours__ y avoir un contrat accessible, sinon
+  le joueur est bloqué. Les contrats doivent aussi pousser vers les
+  chaînes plus longues.
+
+## Contrats
+- Un __tableau de contrats__ : quelques contrats proposés en permanence.
+  Le joueur accepte ceux qu'il veut ; les autres se renouvellent avec le
+  temps. Il y a toujours au moins un contrat simple disponible.
+- Un contrat a un __délai__. S'il n'est pas livré à temps, il __échoue
+  doucement__ : il disparaît et sa récompense est perdue, __sans autre
+  pénalité__. Accepter un contrat à délai est un choix du joueur.
+
+L'échec doux garde le __défi léger__ (voir [Joueur et contexte](joueur.cpt))
+et respecte le pilier 3 : rien n'est perdu en dehors de ce que le
+joueur a choisi de tenter.
+
+## Passifs de prestige
+- Au début de chaque galaxie, le joueur choisit un __nombre fixe__ de
+  passifs (3 pour commencer, à équilibrer) parmi ceux qu'il a débloqués.
+- Familles :
+
+| Famille | Exemples |
+|---|---|
+| __Départ avancé__ | Crédits, une planète déjà spécialisée, des cargos |
+| __Exploration__ | Sondes plus rapides, moins chères, qui voient plus loin |
+| __Logistique__ | Cargos plus rapides ou plus gros, routes moins chères |
+| __Production__ | Une spécialité plus efficace |
+
+## Questions ouvertes
+- Liste des spécialités et des ressources.
+- Ordre d'arrivée des compromis de routes et des niveaux de chaîne par
+  les jalons.
+- Lentille __Balance__ : tout cela donne-t-il la bonne impression ?
+
+Les listes, l'ordre des jalons et les premiers chiffres seront fixés
+dans la tâche « Prototype de l'économie dans un tableur », avant de
+coder.

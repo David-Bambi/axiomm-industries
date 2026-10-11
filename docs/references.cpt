@@ -22,23 +22,17 @@ confirmé par David le 2026-10-11.
 | Limite pour Axiomm | Trop simple | Construction 3D, sessions longues : mal adaptées au téléphone |
 
 ## Pistes pour aller plus loin qu'Idle Planet
-__Retenu__ (voir [Pitch et intentions](pitch.cpt)) : la __logistique
-entre planètes__ est le cœur du jeu. Les autres pistes restent à
-discuter dans la tâche « Économie et chaînes de production ». Lentilles
-__Meaningful Choices__ et __Simplicity/Complexity__ : chaque piste doit
-ajouter des choix intéressants, pas seulement des chiffres.
+Triées en 0.2.0 (voir [Économie et chaînes de production](economie.cpt)).
 
-- __Ratios et goulets__ : une recette consomme et produit à un débit ;
-  le joueur équilibre ses machines (Satisfactory).
-- __Logistique entre planètes__ (__retenu__) : des routes de cargos avec capacité et
-  durée de trajet ; acheminer devient un problème.
-- __Énergie__ : une ressource partagée qui limite la croissance.
-- __Place limitée par planète__ : chaque planète a des emplacements et
-  des spécialités ; où produire quoi devient un choix.
-- __Recettes alternatives__ : plusieurs façons de fabriquer un même
-  produit, chacune avec ses coûts.
-- __Recherche__ : un arbre qui débloque recettes et machines.
-- __Marché__ : des prix qui varient selon l'offre et la demande.
+| Piste | Décision |
+|---|---|
+| Logistique entre planètes | __Retenu__ : le cœur du jeu |
+| Ratios et goulets | __Retenu__ : chaînes de 4 à 5 niveaux |
+| Énergie | __Retenu__ : réserve globale |
+| Recettes alternatives | __Retenu__ |
+| Recherche | __Retenu__, payée en crédits |
+| Place limitée par planète | Remplacé par __une spécialité__ par planète et des __traits__ |
+| Marché aux prix variables | __Écarté__ : revenus par contrats seulement |
 
 Risque : trop de profondeur casse le format mobile (sessions courtes,
 petit écran). Le bon niveau est à trouver par des prototypes.

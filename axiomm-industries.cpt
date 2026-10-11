@@ -5,6 +5,7 @@ icon: lucide:factory
 links: [docs/pitch.cpt,
         docs/joueur.cpt,
         docs/boucle-de-jeu.cpt,
+        docs/economie.cpt,
         docs/references.cpt,
         docs/technique.cpt,
         docs/publication.cpt,
@@ -26,6 +27,8 @@ __Satisfactory__, parce qu'Idle Planet est jugé __trop simple__.
   langues.
 - **Boucle de jeu et progression** : sessions, exploration par sondes,
   contrats, recherche, jalons, prestige et fin.
+- **Économie et chaînes de production** : spécialités, traits, routes,
+  cargos, énergie, contrats, passifs.
 - **Jeux de référence** : ce qu'on prend à Idle Planet et à
   Satisfactory, et les pistes pour aller plus loin.
 - **Contraintes techniques** : Godot 4.5, Android, progression hors
