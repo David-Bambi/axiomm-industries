@@ -1,0 +1,91 @@
+---
+title: Style visuel et interface
+summary: "Vectoriel épuré, espace __contemplatif__, carte libre avec zoom, routes tracées au doigt, goulets visibles sur la carte, interface réduite au minimum, son ambient, jus très sobre."
+icon: lucide:palette
+links: []
+related:
+  - joueur.cpt
+  - economie.cpt
+  - technique.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/beauty.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/virtual-interface.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/atmosphere.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/juiciness.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/retour-visuel/couleur.cpt
+---
+Décisions prises en 0.2.0 (tâche Nexus `t-k7e`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+## Image
+Lentille __Beauty__.
+
+| Élément | Choix |
+|---|---|
+| Style | __Vectoriel épuré__ : formes nettes, aplats, dégradés doux (Mini Metro, Idle Planet Miner) |
+| Ambiance | __Espace contemplatif__ : nébuleuses colorées, calme, émerveillement |
+| Orientation | Portrait (voir [Joueur et contexte](joueur.cpt)) |
+
+L'ambiance sert le __passe-temps__ : ouvrir le jeu doit apaiser. La
+beauté vient du __réseau qui tourne__ dans un ciel calme.
+
+## Carte de la galaxie
+- Une __carte libre__ : on la fait glisser et on la __pince pour
+  zoomer__. Dézoomé, on voit le réseau entier ; zoomé, les détails d'une
+  planète et de ses routes.
+- La grille d'exploration (voir [Boucle de jeu](boucle-de-jeu.cpt)) se
+  dessine sur cette carte ; les cases inconnues restent sombres.
+
+## Gestes
+| Geste | Effet |
+|---|---|
+| Glisser __depuis une planète__ vers une autre | Créer une route (comme Mini Metro) |
+| Glisser __depuis le vide__ | Déplacer la carte |
+| Pincer | Zoomer |
+| Toucher une planète ou une route | Ouvrir son panneau |
+
+## Goulets visibles
+Lentille __Virtual Interface__ : optimiser est l'émotion dominante, le
+joueur doit voir où ça bloque __sans ouvrir de menu__.
+
+- __Couleur des routes__ : une route saturée change de couleur ou
+  d'épaisseur.
+- __Cargos visibles__ : on les voit circuler ; un embouteillage se voit.
+- __Icônes sur les planètes__ : manque ou surplus.
+
+Les couleurs ne suffisent pas seules : chaque état a aussi une forme
+(voir [Jouer sur la couleur](/home/david/projets/6_documentation/documents_cpt/game_design/retour-visuel/couleur.cpt)).
+
+## Interface
+- __Tout sur la carte__ : le moins de menus possible. On agit sur la
+  carte ; un panneau apparaît au besoin.
+- __Un seul bouton__ pour le reste (contrats, recherche, passifs…).
+- Les commandes restent __à portée du pouce__, en bas de l'écran.
+
+## Son
+Lentille __Atmosphere__.
+- __Musique ambient__ calme.
+- __Sons doux__ pour les événements : livraison, contrat rempli,
+  découverte d'une case.
+- Le jeu reste agréable __sans le son__ : beaucoup jouent ainsi sur
+  téléphone.
+
+## Jus
+Lentille __Juiciness__ : __très sobre__. Presque pas d'effets ; la
+satisfaction vient du réseau qui tourne, pas des chiffres qui volent.
+
+## Conséquences techniques
+- Godot convertit les SVG en images à l'importation : zoomer dessus les
+  rend flous. Pour rester net à tous les zooms, dessiner routes et
+  formes simples par le code (`_draw()`, `Line2D`, `Polygon2D`) ou
+  importer les SVG à une échelle plus grande.
+- Beaucoup de cargos visibles : à mesurer sur le téléphone de
+  référence (voir [Contraintes techniques](technique.cpt)).
+
+## Questions ouvertes
+- Palette précise et formes des planètes : à faire avec des
+  __maquettes__ (David). Une capture de la maquette pourra illustrer
+  cette fiche.
+- Faut-il un petit effet pour les grands moments (case découverte,
+  contrat rempli, nouvelle planète) ?
+- Ce que contient le bouton unique, et comment on voit les contrats
+  sans quitter la carte.
