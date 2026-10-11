@@ -1,6 +1,6 @@
 ---
 title: Publication
-summary: "Ce qu'il faut pour publier sur __Google Play__ : compte, signature, tests fermés, fiche du magasin et monétisation."
+summary: "Gratuit et sans publicité, __open source__ (MIT), sur Google Play, itch.io et F-Droid ; testeurs au prototype complet."
 icon: lucide:store
 links: []
 related:
@@ -8,26 +8,57 @@ related:
   - feuille-de-route.cpt
   - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/profit.cpt
 ---
+Décisions prises en 0.2.0 (tâche Nexus `t-3rh`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+## Modèle
+Lentille __Profit__ : gagner de l'argent n'est pas un but (voir
+[Pitch et intentions](pitch.cpt)).
+
+- __Gratuit, sans publicité, sans achat intégré.__
+- Conséquences : aucun SDK publicitaire ni de facturation à intégrer, et
+  le jeu ne collecte aucune donnée. L'économie et le rythme ne sont
+  jamais pensés pour vendre.
+
+## Open source
+- Le code est __open source dès le début__, sous licence __MIT__ (voir
+  [LICENSE](../LICENSE)).
+- Le dépôt Git deviendra public (GitHub) : tout ce qui y entre est
+  public. Ne jamais y mettre la clé de signature (déjà exclue par
+  `.gitignore`).
+- Licence des images et des sons : à choisir (par exemple CC BY 4.0).
+
+## Canaux
+| Canal | Rôle | Exigences |
+|---|---|---|
+| __Google Play__ | Magasin principal | Compte __personnel__ ; format AAB signé ; tests fermés avant de publier |
+| __itch.io__ | Testeurs, puis page publique | Un simple APK |
+| __F-Droid__ | Magasin libre | Code open source ; F-Droid recompile le jeu à partir des sources, modèles d'export de Godot compris |
+
+F-Droid est le canal le plus délicat techniquement : prévoir du temps
+pour la recette de compilation.
+
+## Testeurs
+- Le jeu s'ouvre à des testeurs __au prototype complet__ : une galaxie
+  entière jouable.
+- Les tests fermés de Google Play viennent ensuite.
+
+## Google Play
 Exigences notées en 2026-10 ; __les revérifier__ au moment de publier,
 Google les change souvent.
 
-## Google Play
-- __Compte développeur__ : frais uniques, vérification d'identité.
+- __Compte développeur personnel__ : frais uniques, vérification
+  d'identité.
 - __Tests fermés__ : un compte personnel récent doit faire tester le jeu
   par un groupe de testeurs pendant plusieurs semaines avant de publier
   (12 testeurs pendant 14 jours à ce jour).
 - __Format AAB__, signé avec une __clé de publication__ à conserver
   précieusement (sauvegarde hors de l'ordinateur).
 - __Niveau d'API cible__ minimal imposé chaque année.
-- __Fiche du magasin__ : icône, captures, description, classification
-  du contenu, politique de confidentialité (obligatoire dès qu'on
-  collecte des données, par exemple avec des publicités).
+- __Fiche du magasin__ : icône, captures, description en français et en
+  anglais, classification du contenu, politique de confidentialité (une
+  page courte : « aucune donnée collectée »).
 
-## Monétisation
-À décider : gratuit, payant, publicités, achats intégrés. Chaque option
-touche le design (lentille __Profit__) et ajoute du travail technique
-(modules Google Play pour Godot).
-
-## Autre canal
-__itch.io__ accepte un simple APK : utile pour faire tester tôt, sans
-les contraintes de Google Play.
+## Questions ouvertes
+- Licence des images et des sons.
+- Quand rendre le dépôt public sur GitHub (tâche `t-lld`).

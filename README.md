@@ -14,3 +14,7 @@ La version 0.2.0 définit le jeu, avant tout code.
 
 Fiches Concept (`.cpt`) dans [`docs/`](axiomm-industries.cpt) : pitch, jeux de
 référence, contraintes techniques, publication, feuille de route.
+
+## Licence
+
+Code sous licence [MIT](LICENSE).
