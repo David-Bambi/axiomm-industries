@@ -17,7 +17,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Moteur : Godot **4.5**, GDScript. Plateforme : **Android**. But : publier.
 - Clé Nexus : `axiomm`.
 - Référence « Idle Planet » = Idle Planet Miner (Tech Tree Games).
-- État : 0.1.0 (préparation). Aucun projet Godot pour l'instant.
+- État : 0.2.0 (définir le jeu) en cours ; restent le prototype de l'économie (`t-oxx`), les maquettes (`t-jmq`), le dépôt GitHub public (`t-lld`, attendre le feu vert de David) et la synthèse (`t-g0d`). Aucun projet Godot pour l'instant.
 
 ## Documentation
 

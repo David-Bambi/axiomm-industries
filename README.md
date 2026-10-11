@@ -7,8 +7,7 @@ production, de *Satisfactory*.
 
 ## État
 
-Version **0.1.0** : préparation du projet (dépôt, documentation, suivi).
-La version 0.2.0 définit le jeu, avant tout code.
+Version **0.2.0** en cours : définir le jeu, avant tout code.
 
 ## Documentation
 
