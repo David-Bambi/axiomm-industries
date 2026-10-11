@@ -1,55 +1,93 @@
 ---
 title: Contraintes techniques
-summary: "Godot 4.5 sur Android : rendu, écran tactile, cycle de vie de l'application, progression hors ligne et grands nombres."
+summary: "Godot 4.5 en rendu Compatibility sur Android, 30 images/s mesurées sur un Pixel 7a, simulation par débits, hors ligne sans limite, grille hexagonale (HexGrid), nombres contenus."
 icon: lucide:cpu
 links: []
 related:
+  - style.cpt
+  - economie.cpt
   - publication.cpt
   - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/technology.cpt
   - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/risk-mitigation.cpt
   - /home/david/projets/5_développement/godot_module/godot_module.cpt
+  - /home/david/projets/5_développement/godot_module/HexGrid/hexgrid.cpt
 ---
-Points connus à l'avance ; les choix seront faits en 0.2.0.
+Décisions prises en 0.2.0 (tâche Nexus `t-8nr`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
 
 ## Projet
 | Élément | Choix |
 |---|---|
 | Moteur | Godot 4.5, GDScript |
-| Plateforme | Android |
-| Rendu | À choisir : __Compatibility__ (OpenGL ES 3, le plus d'appareils, suffisant en 2D) ou __Mobile__ (Vulkan) |
-| Orientation | __Portrait__ (voir [Joueur et contexte](joueur.cpt)) |
+| Plateforme | Android, __portrait__ (voir [Joueur et contexte](joueur.cpt)) |
+| Rendu | __Compatibility__ (`gl_compatibility`, OpenGL ES 3) : le plus d'appareils, suffisant en 2D vectorielle |
+| Images par seconde | __30__ (`application/run/max_fps`) : jeu calme, batterie ménagée |
+| Appareil de référence | __Pixel 7a__ (le téléphone de David) |
 | Connexion | Aucune : hors connexion |
 | Langues | Français et anglais : traductions de Godot dès le début |
-| Contrôles | Tactile : toucher, glisser, pincer pour zoomer |
+| Contrôles | Tactile : glisser, pincer, toucher (voir [Style visuel et interface](style.cpt)) |
 
-## Préparer l'export Android
-- Installer un __JDK 17__ et le __SDK Android__, puis les indiquer dans
-  les réglages de l'éditeur (`export/android/java_sdk_path`,
-  `export/android/android_sdk_path`).
-- Installer le __modèle de compilation Android__ (Project > Install
-  Android Build Template) pour produire un __AAB__, le format demandé
-  par Google Play (option `gradle_build/use_gradle_build`).
-- Tester tôt sur un vrai téléphone (débogage en un clic par USB).
+## Simulation
+Lentille __Technology__ : la technique sert l'expérience (optimiser un
+réseau), pas la décoration.
+
+- Le calcul se fait en __débits__ (unités par minute) sur chaque route
+  et chaque planète.
+- Les __cargos visibles sont décoratifs__ : ils montrent le flux mais ne
+  transportent rien dans le calcul.
+- Avantage : le calcul __hors ligne__ est le même qu'en jeu, appliqué à
+  la durée d'absence ; il reste rapide même après des jours.
+
+## Progression hors ligne
+- __Sans limite de durée__ : tout le temps d'absence compte (pilier 3).
+- Les sondes avancent aussi hors ligne (voir [Boucle de jeu](boucle-de-jeu.cpt)).
+- Les contrats à délai peuvent échouer pendant l'absence : échec doux
+  (voir [Économie](economie.cpt)).
+- À la reprise, calculer à partir de l'heure enregistrée. Attention aux
+  changements d'heure du téléphone : prévoir une protection simple.
+
+## Nombres
+- __Économie contenue__ : pas de très grands nombres, pas de type
+  mantisse + exposant. Les revenus par contrats et le prestige qui
+  repart de zéro le permettent.
+- À vérifier dans le [prototype de l'économie](economie.cpt) : si les
+  nombres dépassent ~10¹⁵, revoir ce choix.
+
+## Grille hexagonale
+- La grille d'exploration est __hexagonale__ et utilise le module
+  __HexGrid__ : voisins, distances et chemins.
+- Axiomm sera le __premier client__ du module, qui n'a encore aucun
+  script. N'y écrire que ce dont Axiomm a besoin.
 
 ## Cycle de vie de l'application
 - Android peut fermer le jeu à tout moment en arrière-plan : __sauvegarder
   à la mise en pause__ (`NOTIFICATION_APPLICATION_PAUSED`).
 - Le bouton retour envoie `NOTIFICATION_WM_GO_BACK_REQUEST`.
 
-## Progression hors ligne
-Si le jeu reste un *idle* : à la reprise, calculer ce qui a été produit
-pendant l'absence à partir de l'heure enregistrée. Le calcul doit être
-rapide même pour des jours d'absence : on ne rejoue pas la simulation
-image par image.
+## Préparer l'export Android
+Tâche reportée au premier code (`t-ql5`).
+- Installer un __JDK 17__ et le __SDK Android__, puis les indiquer dans
+  les réglages de l'éditeur (`export/android/java_sdk_path`,
+  `export/android/android_sdk_path`).
+- Installer le __modèle de compilation Android__ (Project > Install
+  Android Build Template) pour produire un __AAB__, le format demandé
+  par Google Play (option `gradle_build/use_gradle_build`).
+- Tester tôt sur le Pixel 7a (débogage en un clic par USB).
 
-## Grands nombres
-Les jeux *idle* dépassent vite les limites usuelles : un `int` s'arrête
-vers 9 × 10¹⁸, un `float` perd sa précision. Option courante : un type
-__mantisse + exposant__ (candidat de module réutilisable).
+## Modules réutilisables
+| Module | Usage |
+|---|---|
+| __HexGrid__ (existant) | Grille de la galaxie |
+| __Definition of Done__ (existant) | Avant chaque relecture |
+| Candidats, écrits dans le jeu puis extraits s'ils sont réussis | Sauvegarde et calcul hors ligne, caméra tactile (glisser, pincer) |
 
-## Risques
+## Risques et parades
+Lentille __Risk Mitigation__, du plus grave au moins grave.
+
 | Risque | Parade |
 |---|---|
-| La profondeur ne tient pas sur un petit écran | Maquettes d'interface tôt, testées sur le téléphone |
-| Simulation trop lourde (beaucoup de chaînes) | Calculer par débits, pas par objets qui circulent |
-| Performance sur un téléphone modeste | Fixer un appareil de référence et mesurer à chaque version |
+| Le réseau est illisible en portrait | Les [maquettes](style.cpt) avant de coder (`t-jmq`) |
+| L'économie n'a pas de choix intéressants, ou devient trop complexe | Le prototype dans un tableur avant de coder (`t-oxx`) |
+| Le Pixel 7a est plus puissant que beaucoup de téléphones | Garder le rendu Compatibility et 30 images/s ; tester une fois sur un appareil plus ancien avant de publier |
+| HexGrid retarde Axiomm | N'écrire que ce dont Axiomm a besoin |
+| Le hors-ligne sans limite casse l'équilibrage | Le vérifier dans le tableur |
