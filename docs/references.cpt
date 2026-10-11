@@ -1,0 +1,45 @@
+---
+title: Jeux de référence
+summary: "Ce qu'on emprunte à __Idle Planet__ et à __Satisfactory__, et les pistes pour rendre la gestion plus riche."
+icon: lucide:gamepad-2
+links: []
+related:
+  - pitch.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/economy.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/meaningful-choices.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/visible-progress.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/simplicity-complexity.cpt
+---
+« Idle Planet » désigne __Idle Planet Miner__ (Tech Tree Games),
+confirmé par David le 2026-10-11.
+
+## Ce que chaque jeu apporte
+| | Idle Planet Miner | Satisfactory |
+|---|---|---|
+| Ce qu'on garde | La __vue__ : la galaxie et ses planètes, lisible sur un téléphone | La __profondeur__ : chaînes de production, ratios, goulets |
+| Boucle | Miner, fondre, fabriquer, vendre, améliorer | Extraire, transformer, acheminer, agrandir |
+| Décisions | Surtout « quoi améliorer ensuite » | Agencement, débits, logistique, énergie |
+| Limite pour Axiomm | Trop simple | Construction 3D, sessions longues : mal adaptées au téléphone |
+
+## Pistes pour aller plus loin qu'Idle Planet
+Options à discuter en 0.2.0, pas des décisions. Lentilles
+__Meaningful Choices__ et __Simplicity/Complexity__ : chaque piste doit
+ajouter des choix intéressants, pas seulement des chiffres.
+
+- __Ratios et goulets__ : une recette consomme et produit à un débit ;
+  le joueur équilibre ses machines (Satisfactory).
+- __Logistique entre planètes__ : des routes de cargos avec capacité et
+  durée de trajet ; acheminer devient un problème.
+- __Énergie__ : une ressource partagée qui limite la croissance.
+- __Place limitée par planète__ : chaque planète a des emplacements et
+  des spécialités ; où produire quoi devient un choix.
+- __Recettes alternatives__ : plusieurs façons de fabriquer un même
+  produit, chacune avec ses coûts.
+- __Recherche__ : un arbre qui débloque recettes et machines.
+- __Marché__ : des prix qui varient selon l'offre et la demande.
+
+Risque : trop de profondeur casse le format mobile (sessions courtes,
+petit écran). Le bon niveau est à trouver par des prototypes.
+
+## Questions
+- D'autres jeux à étudier (Factorio, Mindustry, Shapez, Egg Inc.) ?

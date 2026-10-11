@@ -1,0 +1,38 @@
+---
+title: Feuille de route
+summary: "Les versions prévues : __préparation__ (0.1.0), puis __définir le jeu__ (0.2.0) avant d'écrire du code."
+icon: lucide:map
+links: []
+related:
+  - pitch.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/elemental-tetrad.cpt
+  - /home/david/projets/5_développement/godot_module/definition-of-done/definition-of-done.cpt
+---
+Le suivi détaillé vit dans **Nexus**, projet `axiomm`. Les versions
+après 0.2.0 seront planifiées à la fin de celle-ci, d'après les
+décisions prises (Nexus ne permet pas de renuméroter : on évite de
+planifier trop loin).
+
+| Version | Titre | Ce qu'on a à la fin |
+|---|---|---|
+| 0.1.0 | Préparation | Dépôt Git, documentation, Nexus, registre Concept |
+| 0.2.0 | Définir le jeu | Expérience, piliers, boucle, économie, interface, technique et publication tranchés et écrits |
+
+## 0.2.0 : Définir le jeu
+Version sans code, guidée par la __tétrade élémentaire__ de Schell.
+
+| Tâche | Lentilles |
+|---|---|
+| Expérience essentielle et piliers | Essential Experience, Problem Statement, Eight Filters |
+| Joueur, plaisirs, contexte mobile | Player, Pleasure, Venue |
+| Boucle de jeu et progression | Goals, Visible Progress, Time |
+| Économie et chaînes de production | Economy, Meaningful Choices, Balance |
+| Univers d'Axiomm | World, Story |
+| Style visuel et interface tactile | Beauty, Virtual Interface |
+| Contraintes techniques | Technology, Risk Mitigation |
+| Publication et monétisation | Profit |
+| Synthèse : planifier les versions suivantes | — |
+
+## Ce qui viendra probablement ensuite
+À confirmer en 0.2.0 : un __jouet__ (une planète, une chaîne de
+production) exporté sur le téléphone dès la première version de code.

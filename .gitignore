@@ -1,0 +1,25 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Export presets (may contain local paths)
+export_presets.cfg
+/builds/
+
+# Android signing keys — never commit (keep a backup outside the repo)
+*.keystore
+*.jks
+
+# Editor-specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code — local & ephemeral
+SESSION.md
+.claude/sessions/
+.claude/settings.local.json

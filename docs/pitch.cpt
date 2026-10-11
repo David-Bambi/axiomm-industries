@@ -1,0 +1,47 @@
+---
+title: Pitch et intentions
+summary: "Ce que l'on sait déjà d'Axiomm Industries et les __questions à trancher__ pour définir le jeu."
+icon: lucide:sparkles
+links: []
+related:
+  - references.cpt
+  - feuille-de-route.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/essential-experience.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/problem-statement.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/eight-filters.cpt
+---
+Fiche de départ (2026-10-11). Elle ne contient que ce que David a dit ;
+le reste est à décider en 0.2.0.
+
+## Ce qui est décidé
+- __Sujet__ : gérer __Axiomm__, une industrie à l'échelle d'une galaxie.
+- __Vue__ : celle d'__Idle Planet__ (voir [Jeux de référence](references.cpt)).
+- __Problème à résoudre__ : Idle Planet est __trop simple__. Axiomm doit
+  offrir plus de décisions, dans l'esprit de __Satisfactory__.
+- __Plateforme__ : Android, avec Godot 4.5.
+- __But__ : publier le jeu.
+- David __fait le jeu lui-même__.
+
+## Questions à trancher
+Lentille __Essential Experience__ :
+- Quelle émotion domine ? La satisfaction d'une usine qui tourne seule,
+  le plaisir d'optimiser, la sensation de croissance ?
+- Quel est le __moment idéal__ d'une partie ?
+
+Lentille __Problem Statement__ :
+- Qu'est-ce qui rend Idle Planet « trop simple », précisément ? Trop
+  peu de choix, des choix évidents, trop d'attente ?
+- Le jeu reste-t-il un __idle__ (il progresse sans le joueur) ou
+  devient-il un jeu de gestion actif ?
+- Buts par priorité : se faire plaisir, apprendre, publier, gagner de
+  l'argent ?
+
+Lentille __Eight Filters__ :
+- Ce qui distingue Axiomm d'Idle Planet et de Satisfactory, en une
+  phrase.
+- Temps disponible par semaine et taille d'une première version
+  publiable.
+
+## Piliers
+À écrire en 0.2.0, classés par priorité : en cas de conflit, le plus
+haut l'emporte.

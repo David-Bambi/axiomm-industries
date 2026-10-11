@@ -1,0 +1,53 @@
+---
+title: Contraintes techniques
+summary: "Godot 4.5 sur Android : rendu, écran tactile, cycle de vie de l'application, progression hors ligne et grands nombres."
+icon: lucide:cpu
+links: []
+related:
+  - publication.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/technology.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/risk-mitigation.cpt
+  - /home/david/projets/5_développement/godot_module/godot_module.cpt
+---
+Points connus à l'avance ; les choix seront faits en 0.2.0.
+
+## Projet
+| Élément | Choix |
+|---|---|
+| Moteur | Godot 4.5, GDScript |
+| Plateforme | Android |
+| Rendu | À choisir : __Compatibility__ (OpenGL ES 3, le plus d'appareils, suffisant en 2D) ou __Mobile__ (Vulkan) |
+| Orientation | À choisir : portrait (une main, comme Idle Planet) ou paysage |
+| Contrôles | Tactile : toucher, glisser, pincer pour zoomer |
+
+## Préparer l'export Android
+- Installer un __JDK 17__ et le __SDK Android__, puis les indiquer dans
+  les réglages de l'éditeur (`export/android/java_sdk_path`,
+  `export/android/android_sdk_path`).
+- Installer le __modèle de compilation Android__ (Project > Install
+  Android Build Template) pour produire un __AAB__, le format demandé
+  par Google Play (option `gradle_build/use_gradle_build`).
+- Tester tôt sur un vrai téléphone (débogage en un clic par USB).
+
+## Cycle de vie de l'application
+- Android peut fermer le jeu à tout moment en arrière-plan : __sauvegarder
+  à la mise en pause__ (`NOTIFICATION_APPLICATION_PAUSED`).
+- Le bouton retour envoie `NOTIFICATION_WM_GO_BACK_REQUEST`.
+
+## Progression hors ligne
+Si le jeu reste un *idle* : à la reprise, calculer ce qui a été produit
+pendant l'absence à partir de l'heure enregistrée. Le calcul doit être
+rapide même pour des jours d'absence : on ne rejoue pas la simulation
+image par image.
+
+## Grands nombres
+Les jeux *idle* dépassent vite les limites usuelles : un `int` s'arrête
+vers 9 × 10¹⁸, un `float` perd sa précision. Option courante : un type
+__mantisse + exposant__ (candidat de module réutilisable).
+
+## Risques
+| Risque | Parade |
+|---|---|
+| La profondeur ne tient pas sur un petit écran | Maquettes d'interface tôt, testées sur le téléphone |
+| Simulation trop lourde (beaucoup de chaînes) | Calculer par débits, pas par objets qui circulent |
+| Performance sur un téléphone modeste | Fixer un appareil de référence et mesurer à chaque version |

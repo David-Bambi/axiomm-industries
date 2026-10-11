@@ -1,0 +1,33 @@
+---
+title: Publication
+summary: "Ce qu'il faut pour publier sur __Google Play__ : compte, signature, tests fermés, fiche du magasin et monétisation."
+icon: lucide:store
+links: []
+related:
+  - technique.cpt
+  - feuille-de-route.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/profit.cpt
+---
+Exigences notées en 2026-10 ; __les revérifier__ au moment de publier,
+Google les change souvent.
+
+## Google Play
+- __Compte développeur__ : frais uniques, vérification d'identité.
+- __Tests fermés__ : un compte personnel récent doit faire tester le jeu
+  par un groupe de testeurs pendant plusieurs semaines avant de publier
+  (12 testeurs pendant 14 jours à ce jour).
+- __Format AAB__, signé avec une __clé de publication__ à conserver
+  précieusement (sauvegarde hors de l'ordinateur).
+- __Niveau d'API cible__ minimal imposé chaque année.
+- __Fiche du magasin__ : icône, captures, description, classification
+  du contenu, politique de confidentialité (obligatoire dès qu'on
+  collecte des données, par exemple avec des publicités).
+
+## Monétisation
+À décider : gratuit, payant, publicités, achats intégrés. Chaque option
+touche le design (lentille __Profit__) et ajoute du travail technique
+(modules Google Play pour Godot).
+
+## Autre canal
+__itch.io__ accepte un simple APK : utile pour faire tester tôt, sans
+les contraintes de Google Play.
