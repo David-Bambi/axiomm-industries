@@ -1,0 +1,47 @@
+---
+title: Univers d'Axiomm
+summary: "Axiomm est une __IA industrielle__ dans une galaxie vide ; un __client mystérieux__ passe les contrats. Histoire discrète, ironie douce dans les contrats."
+icon: lucide:bot
+links: []
+related:
+  - pitch.cpt
+  - boucle-de-jeu.cpt
+  - style.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/world.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/story.cpt
+---
+Décisions prises en 0.2.0 (tâche Nexus `t-6ck`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+## Le monde
+Lentille __World__.
+
+- __Axiomm est une IA industrielle__ envoyée dans une galaxie vide pour
+  produire. Le calme et la solitude vont avec l'ambiance contemplative
+  (voir [Style visuel et interface](style.cpt)).
+- Le __rôle du joueur__ n'est pas précisé : il est simplement aux
+  commandes.
+- Le __prestige__ (changer de galaxie) reste une mécanique, sans
+  explication dans l'histoire.
+
+## L'histoire
+Lentille __Story__ : l'histoire est __discrète__. Un cadre et quelques
+textes ; on peut jouer sans rien lire.
+
+- Les contrats viennent d'un __client mystérieux__ : personne ne sait qui
+  il est.
+- La __mégastructure__ finale (voir [Boucle de jeu](boucle-de-jeu.cpt))
+  révèle son identité. Laquelle : à décider plus tard.
+
+## Ton : ironie douce
+- Calme dans l'ensemble ; l'ironie vient __des contrats__. Le client
+  commande des choses étranges, avec des formulations absurdes.
+- L'ironie ne casse jamais le calme : un sourire, pas un gag.
+
+Les contrats ont donc deux rôles : la seule source de revenus (voir
+[Économie](economie.cpt)) et la seule voix du jeu. Leurs textes sont à
+traduire en français et en anglais.
+
+## Questions ouvertes
+- Qui est le client mystérieux ? (à la fin du développement)
+- Quelques exemples de contrats pour fixer le ton.

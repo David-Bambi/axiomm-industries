@@ -7,6 +7,7 @@ links: [docs/pitch.cpt,
         docs/boucle-de-jeu.cpt,
         docs/economie.cpt,
         docs/style.cpt,
+        docs/univers.cpt,
         docs/references.cpt,
         docs/technique.cpt,
         docs/publication.cpt,
@@ -16,7 +17,7 @@ related:
   - /home/david/projets/6_documentation/documents_cpt/godot/godot.cpt
   - /home/david/projets/5_développement/godot_module/godot_module.cpt
 ---
-Le joueur dirige __Axiomm__, une industrie qui exploite une galaxie :
+Le joueur dirige __Axiomm__, une IA industrielle qui exploite une galaxie :
 extraire, transformer, transporter et vendre. La vue s'inspire
 d'__Idle Planet__ ; la profondeur des chaînes de production vient de
 __Satisfactory__, parce qu'Idle Planet est jugé __trop simple__.
@@ -32,6 +33,8 @@ __Satisfactory__, parce qu'Idle Planet est jugé __trop simple__.
   cargos, énergie, contrats, passifs.
 - **Style visuel et interface** : vectoriel, espace contemplatif,
   carte libre, gestes, goulets visibles, son.
+- **Univers d'Axiomm** : une IA industrielle, un client mystérieux,
+  l'ironie douce des contrats.
 - **Jeux de référence** : ce qu'on prend à Idle Planet et à
   Satisfactory, et les pistes pour aller plus loin.
 - **Contraintes techniques** : Godot 4.5, Android, progression hors
