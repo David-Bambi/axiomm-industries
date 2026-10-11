@@ -1,0 +1,95 @@
+---
+title: Boucle de jeu et progression
+summary: "Ce que le joueur fait à chaque session, l'__exploration__ de la grille par sondes, les buts (contrats, recherche, jalons), le __prestige__ dans une nouvelle galaxie et la __mégastructure__ finale."
+icon: lucide:repeat
+links: []
+related:
+  - pitch.cpt
+  - joueur.cpt
+  - references.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/goals.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/visible-progress.cpt
+  - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/time.cpt
+---
+Décisions prises en 0.2.0 (tâche Nexus `t-thu`, 2026-10-11). Chaque
+section cite la lentille de Schell qui l'a guidée.
+
+## Les sessions
+Proposition déduite des décisions, à valider en jouant le prototype.
+
+| Session | Ce que fait le joueur |
+|---|---|
+| __Courte__ (quelques minutes) | Voir ce qui a été produit pendant l'absence, livrer un contrat, ajuster une route, envoyer une sonde |
+| __Longue__ (30 min et plus) | Intégrer une nouvelle planète, repenser le réseau, choisir une recherche, viser un jalon |
+
+Le jeu est __hybride__ (voir [Pitch et intentions](pitch.cpt)) : le
+réseau produit hors ligne, mais on ne le conçoit qu'en jouant.
+
+## Exploration
+Idée de David : la galaxie est une __grille de cases carrées__, cachées
+au départ.
+
+- On découvre une case en y __envoyant une sonde__ : elle coûte des
+  ressources et met du temps à arriver, d'autant plus que la case est
+  loin.
+- Les sondes __avancent hors ligne__, comme la production : on lance une
+  sonde lointaine avant de fermer le jeu et on découvre la case au
+  retour.
+- Une case peut contenir :
+
+| Contenu | Effet |
+|---|---|
+| __Rien__ | L'exploration est un pari |
+| __Une planète__ | Ses ressources, plus ou moins rares |
+| __Un obstacle__ (nébuleuse, astéroïdes) | Les routes le contournent ou paient plus cher pour le traverser |
+| __Un bonus ou un secret__ (épave, station abandonnée) | Ressources, recette rare… |
+
+Les obstacles donnent une forme au réseau : ils créent des choix de
+routes (règle « pas de choix évident », voir [Pitch et intentions](pitch.cpt)).
+
+## Buts
+Lentille __Goals__, du plus court au plus long :
+
+| But | Rôle |
+|---|---|
+| __Contrats__ | Livrer une quantité d'un produit contre une récompense : le __défi léger__ |
+| __Exploration__ | Révéler des cases, trouver la prochaine planète |
+| __Recherche__ | Un arbre qui débloque recettes, cargos et améliorations |
+| __Jalons de l'entreprise__ | Axiomm grandit par paliers qui ouvrent de nouveaux systèmes (pilier 4 : la profondeur se révèle peu à peu) |
+| __Prestige__ | Partir pour une nouvelle galaxie |
+| __Fin__ | Un objectif atteint une seule fois |
+
+## Prestige : une nouvelle galaxie
+Lentille __Time__ : une hiérarchie de durées (session, contrat, planète,
+galaxie).
+
+- Les galaxies sont __générées au hasard__ : chaque nouvelle galaxie est
+  différente, avec des règles qui garantissent qu'elle reste jouable.
+- Le __prestige est libre__ : le joueur part quand il veut, avec des
+  bonus qui dépendent de ses progrès.
+- Repartir dans une galaxie inconnue oblige à repenser son réseau : le
+  prestige sert le pilier « Chaque planète change la donne ».
+
+__Ce que l'on garde__ :
+- Un __bonus de prestige__, sous forme de __compétences passives__ qui
+  aident à reconstruire plus vite. Le joueur __choisit ses passifs au
+  début de chaque galaxie__ : chaque départ est déjà un choix.
+- Tout le reste repart de zéro : réseau, recherche, jalons.
+
+## Fin
+- Un __objectif final__, à part du prestige, atteint une fois :
+  construire une __mégastructure__. Elle consomme d'énormes quantités de
+  produits avancés : c'est le test ultime du réseau.
+- L'atteindre débloque des __aptitudes__ qui augmentent la
+  rejouabilité. Lesquelles : à décider quand le jeu de base sera
+  jouable.
+
+## Progrès visible
+Lentille __Visible Progress__ : la grille révélée, le réseau qui
+s'étend, les jalons franchis et le nombre de galaxies parcourues
+montrent le progrès sans menu.
+
+## Questions ouvertes
+- Quelles aptitudes débloque la mégastructure (plus tard).
+- Quels passifs proposer, et combien en choisir par galaxie (tâche
+  « Économie et chaînes de production »).

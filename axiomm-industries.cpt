@@ -4,6 +4,7 @@ summary: "Jeu de gestion d'une __industrie galactique__ sur Android : la vue d'I
 icon: lucide:factory
 links: [docs/pitch.cpt,
         docs/joueur.cpt,
+        docs/boucle-de-jeu.cpt,
         docs/references.cpt,
         docs/technique.cpt,
         docs/publication.cpt,
@@ -23,6 +24,8 @@ __Satisfactory__, parce qu'Idle Planet est jugé __trop simple__.
   visée, les buts et les piliers.
 - **Joueur et contexte** : joueur visé, plaisirs, sessions, portrait,
   langues.
+- **Boucle de jeu et progression** : sessions, exploration par sondes,
+  contrats, recherche, jalons, prestige et fin.
 - **Jeux de référence** : ce qu'on prend à Idle Planet et à
   Satisfactory, et les pistes pour aller plus loin.
 - **Contraintes techniques** : Godot 4.5, Android, progression hors
