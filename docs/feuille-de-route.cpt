@@ -1,6 +1,6 @@
 ---
 title: Feuille de route
-summary: "Les versions prévues : __préparation__ (0.1.0), puis __définir le jeu__ (0.2.0) avant d'écrire du code."
+summary: "Les versions : __préparation__ (0.1.0), __définir le jeu__ (0.2.0), puis __le jouet__ (0.3.0) sur le téléphone ; un test public dès la 0.5.0."
 icon: lucide:map
 links: []
 related:
@@ -8,15 +8,16 @@ related:
   - /home/david/projets/6_documentation/documents_cpt/game_design/lentilles/elemental-tetrad.cpt
   - /home/david/projets/5_développement/godot_module/definition-of-done/definition-of-done.cpt
 ---
-Le suivi détaillé vit dans **Nexus**, projet `axiomm`. Les versions
-après 0.2.0 seront planifiées à la fin de celle-ci, d'après les
-décisions prises (Nexus ne permet pas de renuméroter : on évite de
-planifier trop loin).
+Le suivi détaillé vit dans **Nexus**, projet `axiomm`. Seule la
+version suivante est créée dans Nexus : Nexus ne permet pas de
+renuméroter, on évite donc de planifier trop loin. Les versions plus
+lointaines sont une __prévision__, revue à la fin de chaque version.
 
 | Version | Titre | Ce qu'on a à la fin |
 |---|---|---|
 | 0.1.0 | Préparation | Dépôt Git, documentation, Nexus, registre Concept |
 | 0.2.0 | Définir le jeu | Expérience, piliers, boucle, économie, interface, technique et publication tranchés et écrits |
+| 0.3.0 | Le jouet | Une carte, des planètes, des routes et le flux qui circule sur le téléphone |
 
 ## 0.2.0 : Définir le jeu
 Version sans code, guidée par la __tétrade élémentaire__ de Schell.
@@ -36,6 +37,35 @@ Version sans code, guidée par la __tétrade élémentaire__ de Schell.
 | Publier le dépôt sur GitHub, licence des images et sons | — |
 | Synthèse : planifier les versions suivantes | — |
 
-## Ce qui viendra probablement ensuite
-À confirmer en 0.2.0 : un __jouet__ (une planète, une chaîne de
-production) exporté sur le téléphone dès la première version de code.
+## 0.3.0 : Le jouet
+Décidé dans la synthèse de 0.2.0 (`t-g0d`, 2026-10-13). Un jouet
+__minimal__ : pas de contrats ni de crédits, tout est gratuit. Le but
+est de répondre à une seule question : __optimiser ce réseau est-il
+amusant ?__
+
+| Tâche | Contenu |
+|---|---|
+| Export Android | JDK 17, SDK Android, modèle de compilation (`t-ql5`) |
+| Projet Godot | Compatibility, portrait, 30 images/s, traductions prêtes |
+| Carte | Grille hexagonale (HexGrid), glisser et pincer |
+| Planètes | Feuille du bas, spécialité et recette (Fer, Cuivre jusqu'au Moteur) |
+| Routes | Glisser d'une planète à l'autre, nombre de cargos |
+| Simulation | Débits et goulets visibles |
+| Cargos et dézoom | Cargos décoratifs, vue dézoomée allégée |
+| Test sur le téléphone | Noter les retours et planifier la 0.4.0 |
+
+## Prévision
+À revoir à la fin de chaque version.
+
+| Version | Titre | Contenu |
+|---|---|---|
+| 0.4.0 | La boucle du jalon 1 | Crédits, tableau de contrats et contrat de jalon, niveaux, cargos (achat et entretien), énergie, sonde et exploration, sauvegarde et hors ligne |
+| 0.5.0 | La profondeur | Jalons 2 et 3, ressources rares, obstacles, cargo amélioré, recettes alternatives, traits, galaxie générée. __Premier test public__ |
+| 0.6.0 | La méta | Recherche, prestige et passifs, hubs, mégastructure |
+| 0.7.0 | L'habillage | Art définitif, son, traductions, tutoriel |
+| 1.0.0 | Publication | Google Play, itch.io, F-Droid |
+
+__Premier test public dès la 0.5.0__ : une version de test sur
+itch.io et en test fermé sur Google Play (un compte personnel récent
+doit de toute façon faire tester le jeu avant de publier). Les retours
+servent à régler l'économie en jouant.

@@ -7,7 +7,8 @@ production, de *Satisfactory*.
 
 ## État
 
-Version **0.2.0** en cours : définir le jeu, avant tout code.
+Version **0.2.0** terminée : le jeu est défini (documentation, prototype de l'économie,
+maquettes). Prochaine version : **0.3.0, le jouet**, premier code sur le téléphone.
 
 ## Documentation
 

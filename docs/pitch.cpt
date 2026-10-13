@@ -90,6 +90,8 @@ En cas de conflit, le pilier le plus haut l'emporte.
 4. __Simple à prendre en main, profond à maîtriser__ : on démarre comme
    dans Idle Planet Miner, puis la profondeur se révèle peu à peu.
 
-## Questions ouvertes
-- Taille d'une première version publiable : à fixer dans la synthèse de
-  0.2.0 (tâche `t-g0d`).
+## Première version publiée
+Décidé dans la synthèse de 0.2.0 (`t-g0d`, 2026-10-13) : un __test
+public tôt__, dès la 0.5.0 (un jalon complet, la profondeur, une
+galaxie générée), sur itch.io et en test fermé sur Google Play. La
+1.0.0 vient ensuite. Voir la [Feuille de route](feuille-de-route.cpt).

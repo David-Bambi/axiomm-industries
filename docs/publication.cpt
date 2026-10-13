@@ -27,6 +27,8 @@ Lentille __Profit__ : gagner de l'argent n'est pas un but (voir
   [David-Bambi/axiomm-industries](https://github.com/David-Bambi/axiomm-industries).
   Tout ce qui y entre est public. Ne jamais y mettre la clé de signature
   (déjà exclue par `.gitignore`).
+- __Premier test public dès la 0.5.0__ : itch.io et test fermé sur
+  Google Play (voir la [Feuille de route](feuille-de-route.cpt)).
 - Les commits utilisent l'adresse __noreply__ de GitHub, pas l'adresse
   personnelle.
 - Images et sons sous licence __CC BY 4.0__ : réutilisation libre en
