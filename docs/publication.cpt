@@ -23,10 +23,14 @@ Lentille __Profit__ : gagner de l'argent n'est pas un but (voir
 ## Open source
 - Le code est __open source dès le début__, sous licence __MIT__ (voir
   [LICENSE](../LICENSE)).
-- Le dépôt Git deviendra public (GitHub) : tout ce qui y entre est
-  public. Ne jamais y mettre la clé de signature (déjà exclue par
-  `.gitignore`).
-- Licence des images et des sons : à choisir (par exemple CC BY 4.0).
+- Le dépôt est __public__ sur GitHub depuis le 2026-10-13 :
+  [David-Bambi/axiomm-industries](https://github.com/David-Bambi/axiomm-industries).
+  Tout ce qui y entre est public. Ne jamais y mettre la clé de signature
+  (déjà exclue par `.gitignore`).
+- Les commits utilisent l'adresse __noreply__ de GitHub, pas l'adresse
+  personnelle.
+- Images et sons sous licence __CC BY 4.0__ : réutilisation libre en
+  citant l'auteur. Compatible avec F-Droid.
 
 ## Canaux
 | Canal | Rôle | Exigences |
@@ -58,7 +62,3 @@ Google les change souvent.
 - __Fiche du magasin__ : icône, captures, description en français et en
   anglais, classification du contenu, politique de confidentialité (une
   page courte : « aucune donnée collectée »).
-
-## Questions ouvertes
-- Licence des images et des sons.
-- Quand rendre le dépôt public sur GitHub (tâche `t-lld`).

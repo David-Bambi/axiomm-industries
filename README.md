@@ -11,9 +11,15 @@ Version **0.2.0** en cours : définir le jeu, avant tout code.
 
 ## Documentation
 
-Fiches Concept (`.cpt`) dans [`docs/`](axiomm-industries.cpt) : pitch, jeux de
-référence, contraintes techniques, publication, feuille de route.
+Fiches Concept (`.cpt`, du Markdown avec un en-tête YAML) : la racine
+[`axiomm-industries.cpt`](axiomm-industries.cpt), puis [`docs/`](docs) : pitch,
+joueur, boucle de jeu, économie, style, univers, technique, publication, feuille
+de route. Prototype de l'économie : [`docs/prototype/economie.ods`](docs/prototype/economie.ods).
+Maquettes : [`docs/maquettes/`](docs/maquettes).
 
 ## Licence
 
-Code sous licence [MIT](LICENSE).
+- **Code** : licence [MIT](LICENSE).
+- **Images et sons** (maquettes et ressources du jeu) : licence
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.fr) ;
+  © 2026 David Boivin.
