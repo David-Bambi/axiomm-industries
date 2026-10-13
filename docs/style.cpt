@@ -81,11 +81,40 @@ satisfaction vient du réseau qui tourne, pas des chiffres qui volent.
 - Beaucoup de cargos visibles : à mesurer sur le téléphone de
   référence (voir [Contraintes techniques](technique.cpt)).
 
+## Écran principal
+Lentille __Virtual Interface__ (tâche `t-jmq`, décisions du 2026-10-13).
+Maquettes de départ dans `docs/maquettes/` : `squelette.svg` (vue
+zoomée, avec un calque « Panneau ouvert ») et `squelette-dezoom.svg`
+(réseau de 18 planètes). Calques Inkscape : Repères, Interface, Carte,
+Panneau ouvert, Menu radial ouvert.
+
+![Vue zoomée](maquettes/squelette.png) ![Vue dézoomée](maquettes/squelette-dezoom.png)
+
+| Zone | Contenu |
+|---|---|
+| __Haut__ | Crédits et progression du jalon en cours |
+| __Carte__ | Les deux tiers du haut de l'écran |
+| __Bandeau de contrats__ | En bas : le contrat le plus urgent ; on le __tire vers le haut__ pour voir les 3 contrats |
+| __Bouton unique__ | En bas au centre, à portée du pouce. Il ouvre un __menu radial__ : 5 boutons en arc au-dessus du pouce (Recherche, Jalons, Sonde, Passifs, Réglages) |
+| __Panneaux__ | Une __feuille qui monte du bas__ (planète, route) ; la carte glisse vers le haut pour garder visible ce qu'on a touché |
+
+- __Spécialité d'une planète__ : une __couleur et un symbole__ (Mine :
+  montagne, Fonderie : flamme, Usine : engrenage, Assemblage : pièces
+  emboîtées, Centrale : éclair). Le symbole reste lisible sans la
+  couleur.
+- __Vue dézoomée__ : on cache les __noms__, les __cargos__ et les
+  __traits de la grille__. Restent les planètes et leurs symboles, les
+  routes (une route saturée reste orange et épaisse), les icônes de
+  goulet, la limite entre cases connues et inconnues, et les obstacles.
+
 ## Questions ouvertes
-- Palette précise et formes des planètes : à faire avec des
-  __maquettes__ (David). Une capture de la maquette pourra illustrer
-  cette fiche.
+- Palette précise : celle des maquettes est provisoire.
 - Faut-il un petit effet pour les grands moments (case découverte,
   contrat rempli, nouvelle planète) ?
-- Ce que contient le bouton unique, et comment on voit les contrats
-  sans quitter la carte.
+- __Cibles tactiles en vue dézoomée__ : une planète y fait environ
+  20 dp, moins que les 48 dp conseillés. Agrandir la zone touchable
+  autour du dessin, ou zoomer d'abord sur la zone touchée ?
+- __Routes qui se croisent__ : les distinguer (teinte selon ce qu'elles
+  transportent, passage sous les planètes) ?
+- Comment s'affiche ce qu'ouvre le menu radial (la recherche demande
+  sans doute un écran entier).
