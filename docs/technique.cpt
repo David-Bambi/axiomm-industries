@@ -24,7 +24,9 @@ section cite la lentille de Schell qui l'a guidée.
 | Images par seconde | __30__ (`application/run/max_fps`) : jeu calme, batterie ménagée |
 | Appareil de référence | __Pixel 7__ (le téléphone de David, Android 16) |
 | Connexion | Aucune : hors connexion |
-| Langues | Français et anglais : traductions de Godot dès le début |
+| Dossier du projet | `axiomm_industries/` (sous-dossier du dépôt) |
+| Langues | Français et anglais : traductions de Godot en __CSV__ (`traductions/textes.csv`, colonnes `keys,fr,en`) |
+| Tests et style | __GUT 9.5.0__ (`addons/gut/`, la version pour Godot 4.5 ; 9.6 demande Godot 4.6), __gdformat__ et __gdlint__ 4.5 (`gdtoolkit`, par pipx) ; exclure `addons/` de gdformat et gdlint |
 | Contrôles | Tactile : glisser, pincer, toucher (voir [Style visuel et interface](style.cpt)) |
 
 ## Simulation
@@ -82,11 +84,14 @@ Pour installer d'autres paquets :
 `sdkmanager --sdk_root=$HOME/Android/Sdk "<paquet>"` (outil dans
 `~/Android/Sdk/cmdline-tools/latest/bin/`).
 
-À faire dans le vrai projet (`t-44z`) : installer le __modèle de
-compilation Android__ (Projet › Installer le modèle de compilation
-Android) et cocher `gradle_build/use_gradle_build` pour produire un
-__AAB__, le format demandé par Google Play ; choisir le nom unique du
-paquet.
+Dans le projet (`t-44z`, 2026-10-13) : __modèle de compilation
+Android__ installé (`android/`, hors Git), `gradle_build/use_gradle_build`
+coché, format __APK__ pour tester (passer en __AAB__ pour Google Play),
+paquet __`com.davidboivin.axiomm`__ (définitif une fois publié). Testé
+sur le Pixel 7 : l'application s'ouvre en portrait.
+
+Procédure générale : fiche Godot `editeur/android/android.cpt` dans
+`/home/david/projets/6_documentation/documents_cpt/godot`.
 
 ## Modules réutilisables
 | Module | Usage |
