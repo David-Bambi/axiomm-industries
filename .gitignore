@@ -23,3 +23,6 @@ Thumbs.db
 SESSION.md
 .claude/sessions/
 .claude/settings.local.json
+
+# Verrous de LibreOffice
+.~lock.*#
