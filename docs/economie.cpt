@@ -29,17 +29,73 @@ Lentille __Meaningful Choices__.
   proche mais pauvre, chaude donc fonderie efficace…). La meilleure
   spécialité dépend donc de la planète et de sa place dans le réseau.
 
-Liste des spécialités : à écrire (mine, fonderie, usine, centrale,
-entrepôt… ?).
+- Une planète spécialisée produit __une seule recette__, choisie par le
+  joueur (ex. une fonderie à lingots de fer). Une __mine__ exploite __un
+  seul gisement__, choisi parmi ceux de la planète : pas de sous-produits.
+
+Spécialités (tâche `t-oxx`, 2026-10-13) :
+
+| Spécialité | Rôle |
+|---|---|
+| __Mine__ | Extrait une ressource brute (niveau 1) |
+| __Fonderie__ | Ressource brute → matériau (niveau 2) |
+| __Usine__ | Matériaux → pièces (niveau 3) |
+| __Assemblage__ | Pièces → composants et produits avancés (niveaux 4 et 5) |
+| __Centrale__ | Énergie pour toute la galaxie |
+| __Entrepôt__ | Hub logistique (arrive avec le jalon des hubs) |
 
 ## Chaînes de production
-- __4 à 5 niveaux__ de transformation, par exemple : minerai → lingot →
-  pièce → composant → produit avancé.
+- __5 niveaux__ de transformation : ressource → matériau → pièce →
+  composant → produit avancé.
 - Les produits avancés __mélangent plusieurs chaînes__ : il faut faire
   converger des flux venus de planètes différentes.
-- __Recettes alternatives__ : un même produit peut se faire de deux
-  façons, avec des ressources différentes. Une galaxie pauvre en une
-  ressource reste jouable.
+
+__6 ressources brutes__, qui arrivent par paliers : Fer et Cuivre au
+départ, Silicium et Carbone, puis Titane et Glace (rares). 25 objets
+en tout :
+
+| Niveau | Objets |
+|---|---|
+| 1 Ressource | Fer, Cuivre, Silicium, Carbone, Titane, Glace |
+| 2 Matériau | Lingot de fer, Lingot de cuivre, Silicium pur, Graphite, Lingot de titane, Eau |
+| 3 Pièce | Plaque de fer, Fil de cuivre, Acier, Puce, Alliage, Carburant |
+| 4 Composant | Moteur, Circuit, Coque, Réacteur |
+| 5 Produit avancé | Robot industriel, Satellite, Module de mégastructure |
+
+Recettes principales :
+
+| Produit | Entrées |
+|---|---|
+| Plaque de fer | Lingot de fer |
+| Fil de cuivre | Lingot de cuivre |
+| Acier | Lingot de fer + Graphite |
+| Puce | Silicium pur + Fil de cuivre |
+| Alliage | Lingot de titane + Acier |
+| Carburant | Eau + Graphite |
+| Moteur | Plaque de fer + Fil de cuivre |
+| Circuit | Puce + Fil de cuivre |
+| Coque | Acier + Alliage |
+| Réacteur | Carburant + Acier |
+| Robot industriel | Moteur + Circuit |
+| Satellite | Circuit + Coque |
+| Module de mégastructure | Réacteur + Coque + Circuit |
+
+Avec Fer et Cuivre seulement, on monte déjà une chaîne complète jusqu'au
+Moteur : c'est le __jouet__ de la première version de code.
+
+__Recettes alternatives__ : un même produit peut se faire sans une
+ressource rare, en moins efficace (environ 10 à 30 % de crédits en moins par planète). Une galaxie pauvre en une ressource
+reste jouable.
+
+| Produit | Alternative | Ressource évitée |
+|---|---|---|
+| Acier | 3 Lingots de fer | Carbone |
+| Puce | 2 Fils de cuivre + Graphite | Silicium |
+| Coque | 3 Aciers (coque lourde) | Titane |
+| Carburant | 3 Graphites | Glace |
+
+Les quantités sont provisoires : elles sont réglées dans le tableur
+`docs/prototype/economie.ods`.
 
 ## Routes
 Lentille __Triangularity__ : une route sûre et modeste, ou une route
@@ -47,6 +103,14 @@ risquée et rentable.
 
 - Le __débit d'une route dépend des cargos__ qui lui sont affectés. Plus
   la route est longue, plus il faut de cargos pour le même débit.
+- Un cargo s'__achète__ en crédits puis coûte un __entretien__ en crédits
+  par minute. Le __cargo amélioré__ (jalon 3) paie son entretien en
+  __Carburant__ ; il est __lent et gros__ (flux de masse), le cargo de
+  base reste utile pour les contrats à délai (décision du 2026-10-13).
+- Conséquence : le transport coûte autant par objet quelle que soit sa
+  valeur. Expédier du minerai loin coûte cher (un tiers de sa valeur à
+  10 cases), expédier un Moteur presque rien : on a intérêt à
+  __transformer près des mines__.
 - Compromis qui rendent le choix d'une route intéressant :
 
 | Compromis | Le choix |
@@ -57,13 +121,34 @@ risquée et rentable.
 | __Types de cargos__ | Rapides et petits, ou lents et gros ; certains produits demandent un cargo spécial |
 
 Les quatre compromis ensemble sont beaucoup pour un débutant : ils
-arrivent __par les jalons__ (pilier 4). Ordre d'arrivée à décider.
+arrivent __par les jalons__ (pilier 4), voir ci-dessous.
+
+## Jalons
+Lentille __Visible Progress__ (décisions du 2026-10-13). Chaque jalon
+ouvre des ressources, des produits et un compromis de route. On franchit
+un jalon en __livrant un produit précis__ : le jalon suivant demande
+toujours le produit phare du jalon en cours.
+
+| Jalon | Ressources | Produits ouverts | Compromis de route | Pour passer au suivant |
+|---|---|---|---|---|
+| 1 | Fer, Cuivre | Chaîne jusqu'au Moteur | __Distance__ (un seul type de cargo) | Livrer des Moteurs |
+| 2 | Silicium, Carbone | Acier, Circuit, Robot industriel | __Obstacles__ (nébuleuses) | Livrer des Robots industriels |
+| 3 | Titane, Glace | Coque, Réacteur, Satellite, centrale améliorée | __Types de cargos__ (le Carburant demande un cargo spécial) | Livrer des Satellites |
+| 4 | — | Module de mégastructure | __Hubs, entrepôts__ | — |
+
+Le produit d'un jalon se livre par un __contrat de jalon__ : toujours
+affiché, sans délai, payé en crédits comme les autres. Le joueur a donc
+toujours un but visible. Les quantités à livrer sont réglées dans le
+tableur.
 
 ## Énergie
 - Une __réserve globale__ : les planètes spécialisées en __centrale__
   produisent de l'énergie pour toute la galaxie, sans transport.
 - Toutes les usines y puisent : chaque planète consacrée à l'énergie est
   une planète qui ne produit pas autre chose.
+- Une centrale de base ne consomme rien. __En montant de niveau__, elle
+  produit beaucoup plus mais __consomme du Carburant__ : le carburant
+  sert soit aux contrats, soit à l'énergie (décision du 2026-10-13).
 
 ## Argent
 Lentille __Economy__.
@@ -80,12 +165,23 @@ Lentille __Economy__.
   chaînes plus longues.
 
 ## Contrats
-- Un __tableau de contrats__ : quelques contrats proposés en permanence.
-  Le joueur accepte ceux qu'il veut ; les autres se renouvellent avec le
-  temps. Il y a toujours au moins un contrat simple disponible.
-- Un contrat a un __délai__. S'il n'est pas livré à temps, il __échoue
+- Un __tableau de contrats__ : __3 contrats__ proposés en permanence, en
+  plus du contrat de jalon. Le joueur accepte ceux qu'il veut ; un
+  contrat non accepté est remplacé au bout d'environ 30 min. Il y a
+  toujours au moins un contrat simple disponible.
+- Les contrats sont __plutôt gros__ : de 15 min à 4 h de production
+  d'une planète. La taille se compte en minutes de production, pas en
+  nombre d'objets.
+- __Certains contrats seulement__ ont un __délai__ ; ils paient
+  __+50 %__. Les contrats sans délai garantissent un revenu sûr, même
+  hors ligne. Un contrat à délai non livré à temps __échoue
   doucement__ : il disparaît et sa récompense est perdue, __sans autre
   pénalité__. Accepter un contrat à délai est un choix du joueur.
+
+Rythme visé (décisions du 2026-10-13) : une galaxie dure __3 à 5 jours__
+jusqu'au premier prestige. Jalon 1 en environ 30 min, jalon 2 en
+environ 4 h, jalon 3 en environ 36 h. Les quantités des contrats de
+jalon en découlent (tableur).
 
 L'échec doux garde le __défi léger__ (voir [Joueur et contexte](joueur.cpt))
 et respecte le pilier 3 : rien n'est perdu en dehors de ce que le
@@ -94,6 +190,9 @@ joueur a choisi de tenter.
 ## Passifs de prestige
 - Au début de chaque galaxie, le joueur choisit un __nombre fixe__ de
   passifs (3 pour commencer, à équilibrer) parmi ceux qu'il a débloqués.
+- Débloquer un passif coûte des __points de prestige__, de plus en plus
+  cher (10, 20, 40, 80…) : une galaxie d'environ 30 millions de crédits
+  rapporte environ 170 points, soit 3 à 5 passifs.
 - Familles :
 
 | Famille | Exemples |
@@ -103,12 +202,41 @@ joueur a choisi de tenter.
 | __Logistique__ | Cargos plus rapides ou plus gros, routes moins chères |
 | __Production__ | Une spécialité plus efficace |
 
-## Questions ouvertes
-- Liste des spécialités et des ressources.
-- Ordre d'arrivée des compromis de routes et des niveaux de chaîne par
-  les jalons.
-- Lentille __Balance__ : tout cela donne-t-il la bonne impression ?
+## Chiffres
+Lentilles __Balance__ et __Expected Value__ (décisions du 2026-10-13).
+Les valeurs de départ et les calculs sont dans le tableur
+`docs/prototype/economie.ods`.
 
-Les listes, l'ordre des jalons et les premiers chiffres seront fixés
-dans la tâche « Prototype de l'économie dans un tableur », avant de
-coder.
+Ces chiffres sont un __point de départ__ : ils donnent une structure
+cohérente et écartent les choix évidents repérés sur papier.
+L'économie sera __réglée en jouant__, au fil du développement (David).
+
+| Réglage | Décision |
+|---|---|
+| __Valeur d'un objet__ | Somme des valeurs de ses entrées __× 2__ ; toute ressource brute vaut 1 |
+| __Durée d'une recette__ | La même pour toutes (1 cycle par seconde au niveau 1) |
+| __Ressources rares__ | Même valeur que les autres : la rareté vient du nombre de gisements |
+| __Coût d'un niveau de planète__ | __× 1,2__ par niveau ; le débit gagne environ +10 % par niveau |
+| __Prix selon la spécialité__ | Planètes et niveaux coûtent × 1 (Mine), × 2 (Fonderie), × 4 (Usine), × 8 (Assemblage) : les prix suivent la valeur produite |
+| __Coût d'une nouvelle planète__ | Chaque planète spécialisée coûte __× 1,3__ de la précédente |
+| __Prestige__ | __Racine carrée__ des crédits gagnés dans la galaxie |
+
+__Mesure clé__ : les crédits gagnés par planète et par minute selon
+l'objet vendu, en comptant toutes les planètes de la chaîne (centrales
+comprises). Elle doit monter avec le niveau, sinon vendre du brut est un
+choix évident. Avec une marge de × 1,5 et des recettes plus lentes en
+fin de chaîne (premier essai), un Moteur rapportait moins que du Fer
+brut ; avec les réglages retenus, la mesure passe de 59 (brut) à 131
+(Moteur) et 406 (Satellite).
+
+__Monter de niveau ou agrandir__ : avec des niveaux à × 1,15 et des
+planètes à × 1,5 (premier essai), monter de niveau était toujours moins
+cher qu'une nouvelle planète. Avec × 1,2 et × 1,3, les deux se valent
+vers la 7ᵉ à 13ᵉ planète : le choix existe vraiment.
+
+## Questions ouvertes
+- Nom définitif du Robot industriel (provisoire).
+- Lentille __Balance__ : tout cela donne-t-il la bonne impression ? À
+  vérifier en jouant le premier jouet.
+- Ce que rapportent exactement les passifs, la recherche et les traits
+  de planète : à chiffrer quand ils seront jouables.

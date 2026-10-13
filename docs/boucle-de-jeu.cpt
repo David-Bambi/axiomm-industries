@@ -30,9 +30,11 @@ Idée de David : la galaxie est une __grille de cases__, cachées au
 départ. Les cases sont __hexagonales__ (module HexGrid, décidé dans
 [Contraintes techniques](technique.cpt)).
 
-- On découvre une case en y __envoyant une sonde__ : elle coûte des
-  ressources et met du temps à arriver, d'autant plus que la case est
-  loin.
+- On découvre une case en y __envoyant une sonde__ : elle met du temps à
+  arriver, d'autant plus que la case est loin.
+- __Une seule sonde à la fois__. Elle s'achète en __crédits__ et son
+  __prix augmente__ avec chaque case explorée (décision du 2026-10-13).
+  La sonde n'est pas un produit des chaînes.
 - Les sondes __avancent hors ligne__, comme la production : on lance une
   sonde lointaine avant de fermer le jeu et on découvre la case au
   retour.
