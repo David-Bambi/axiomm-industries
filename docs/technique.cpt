@@ -1,6 +1,6 @@
 ---
 title: Contraintes techniques
-summary: "Godot 4.5 en rendu Compatibility sur Android, 30 images/s mesurées sur un Pixel 7a, simulation par débits, hors ligne sans limite, grille hexagonale (HexGrid), nombres contenus."
+summary: "Godot 4.5 en rendu Compatibility sur Android, 30 images/s mesurées sur un Pixel 7, simulation par débits, hors ligne sans limite, grille hexagonale (HexGrid), nombres contenus."
 icon: lucide:cpu
 links: []
 related:
@@ -22,7 +22,7 @@ section cite la lentille de Schell qui l'a guidée.
 | Plateforme | Android, __portrait__ (voir [Joueur et contexte](joueur.cpt)) |
 | Rendu | __Compatibility__ (`gl_compatibility`, OpenGL ES 3) : le plus d'appareils, suffisant en 2D vectorielle |
 | Images par seconde | __30__ (`application/run/max_fps`) : jeu calme, batterie ménagée |
-| Appareil de référence | __Pixel 7a__ (le téléphone de David) |
+| Appareil de référence | __Pixel 7__ (le téléphone de David, Android 16) |
 | Connexion | Aucune : hors connexion |
 | Langues | Français et anglais : traductions de Godot dès le début |
 | Contrôles | Tactile : glisser, pincer, toucher (voir [Style visuel et interface](style.cpt)) |
@@ -64,15 +64,29 @@ réseau), pas la décoration.
   à la mise en pause__ (`NOTIFICATION_APPLICATION_PAUSED`).
 - Le bouton retour envoie `NOTIFICATION_WM_GO_BACK_REQUEST`.
 
-## Préparer l'export Android
-Tâche reportée au premier code (`t-ql5`).
-- Installer un __JDK 17__ et le __SDK Android__, puis les indiquer dans
-  les réglages de l'éditeur (`export/android/java_sdk_path`,
-  `export/android/android_sdk_path`).
-- Installer le __modèle de compilation Android__ (Project > Install
-  Android Build Template) pour produire un __AAB__, le format demandé
-  par Google Play (option `gradle_build/use_gradle_build`).
-- Tester tôt sur le Pixel 7a (débogage en un clic par USB).
+## Export Android
+Installé et testé le 2026-10-13 (`t-ql5`) : un projet vide s'affiche
+sur le Pixel 7 en débogage en un clic.
+
+| Élément | Réglage |
+|---|---|
+| JDK | __OpenJDK 17__, `/usr/lib/jvm/java-17-openjdk-amd64` (`JAVA_HOME` dans `~/.bashrc`) |
+| SDK Android | `~/Android/Sdk`, installé avec les *command-line tools* (sans Android Studio) |
+| Paquets du SDK | `platform-tools`, `build-tools;35.0.0`, `platforms;android-35`, `cmdline-tools;latest`, `cmake;3.10.2.4988404`, `ndk;28.1.13356709` (versions demandées par Godot 4.5) |
+| Réglages de l'éditeur | `export/android/java_sdk_path`, `export/android/android_sdk_path` |
+| Modèles d'export | 4.5.stable |
+| Clé de débogage | Créée par Godot (`~/.local/share/godot/keystores/debug.keystore`) |
+| Téléphone | Options pour les développeurs, débogage USB, mode USB « Transfert de fichiers » |
+
+Pour installer d'autres paquets :
+`sdkmanager --sdk_root=$HOME/Android/Sdk "<paquet>"` (outil dans
+`~/Android/Sdk/cmdline-tools/latest/bin/`).
+
+À faire dans le vrai projet (`t-44z`) : installer le __modèle de
+compilation Android__ (Projet › Installer le modèle de compilation
+Android) et cocher `gradle_build/use_gradle_build` pour produire un
+__AAB__, le format demandé par Google Play ; choisir le nom unique du
+paquet.
 
 ## Modules réutilisables
 | Module | Usage |
@@ -88,6 +102,6 @@ Lentille __Risk Mitigation__, du plus grave au moins grave.
 |---|---|
 | Le réseau est illisible en portrait | Les [maquettes](style.cpt) avant de coder (`t-jmq`) |
 | L'économie n'a pas de choix intéressants, ou devient trop complexe | Le prototype dans un tableur avant de coder (`t-oxx`) |
-| Le Pixel 7a est plus puissant que beaucoup de téléphones | Garder le rendu Compatibility et 30 images/s ; tester une fois sur un appareil plus ancien avant de publier |
+| Le Pixel 7 est plus puissant que beaucoup de téléphones | Garder le rendu Compatibility et 30 images/s ; tester une fois sur un appareil plus ancien avant de publier |
 | HexGrid retarde Axiomm | N'écrire que ce dont Axiomm a besoin |
 | Le hors-ligne sans limite casse l'équilibrage | Le vérifier dans le tableur |
